@@ -43,6 +43,24 @@ Objects = {
         end
     },
 
+
+    button = {
+        texture = nil,
+        w = 0,
+        h = 0,
+        x = 0,
+        y = 0,
+
+        new = function (texture, w, h, x, y)
+            local self = {}
+            self.texture = texture
+            self.w = w
+            self.h = h
+            self.x = x
+            self.y = y
+            return self
+        end
+    }
 }
 
 
