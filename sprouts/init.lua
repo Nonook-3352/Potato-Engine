@@ -1,6 +1,6 @@
 Sprouts = {}
 
-Sprouts.nonook_testing_sprouts = dofile("sprouts/nonook_testing_sprouts.lua")
+Sprouts.nonook_testing_sprouts = require("sprouts/nonook_testing_sprouts/init")
 
 
 return Sprouts

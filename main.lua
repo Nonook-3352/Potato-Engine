@@ -30,5 +30,5 @@ print(Textures.simple_button.w)
 print(Textures.simple_button.x)
 
 
-print(sprouts.nonook_testing_sprouts.test)
+
 SproutAPI.ending(sprouts)

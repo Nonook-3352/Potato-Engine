@@ -17,6 +17,5 @@ end
 
 
 return {
-    test = test,
     ending = ending
 }
