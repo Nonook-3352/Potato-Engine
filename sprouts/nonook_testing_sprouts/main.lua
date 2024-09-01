@@ -1,5 +1,6 @@
 local ObjectAPI = require("API.ObjectAPI")
 local TextureAPI = require("API.TextureAPI")
+local SproutAPI = require("API.SproutAPI")
 
 
 print("hello from my sprout !")
@@ -11,10 +12,16 @@ TextureAPI:add("custom_texture", ObjectAPI.texture.new("custom_texture.png", 128
 
 print(TextureAPI.Textures.custom_texture.image)
 
+local function testing()
+    print("hello from my sprout")
+end
+
 local ending = function ()
     print("goodbye")
 end
 
+
+SproutAPI.functions:add("testing", testing)
 
 return {
     ending = ending

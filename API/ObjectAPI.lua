@@ -44,7 +44,7 @@ Objects = {
     },
 
 
-    button = {
+    rectbutton = {
         texture = nil,
         w = 0,
         h = 0,
@@ -56,6 +56,22 @@ Objects = {
             self.texture = texture
             self.w = w
             self.h = h
+            self.x = x
+            self.y = y
+            return self
+        end
+    },
+
+    circlebutton = {
+        texture = nil,
+        r = 0,
+        x = 0,
+        y = 0,
+
+        new = function (texture, r, x, y)
+            local self = {}
+            self.texture = texture
+            self.r = r
             self.x = x
             self.y = y
             return self
