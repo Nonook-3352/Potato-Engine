@@ -7,7 +7,7 @@ local textureAPI ={
         if self.Textures[name] == nil then
             self.Textures[name] = texture
         else
-            print(name, "already exist")
+            print(name .. " already exist")
         end
     end,
 

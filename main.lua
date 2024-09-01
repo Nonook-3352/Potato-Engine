@@ -1,9 +1,10 @@
 local ObjectAPI = require("API.ObjectAPI")
 local TextureAPI = require("API.TextureAPI")
 local Textures = TextureAPI.Textures
+local SproutAPI = require("API.SproutAPI")
 
 
-local sprouts = dofile("sprouts/init.lua")
+local sprouts = require("sprouts.init")
 TextureAPI:add("icon", ObjectAPI.texture.new("icon.png", 512, 512, {sx=0.3, sy=0.3}))
 TextureAPI:add("title", ObjectAPI.text.new({0,0,0}, "Minecraft"))
 TextureAPI:add("button_sprite", ObjectAPI.sprite.new(Textures.icon, 70, 100))
@@ -27,3 +28,7 @@ print(Textures.button_sprite.y)
 print(Textures.simple_button.texture.image)
 print(Textures.simple_button.w)
 print(Textures.simple_button.x)
+
+
+print(sprouts.nonook_testing_sprouts.test)
+SproutAPI.ending(sprouts)
