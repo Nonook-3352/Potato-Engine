@@ -1,26 +1,29 @@
 local ObjectAPI = require("API.ObjectAPI")
 local TextureAPI = require("API.TextureAPI")
+local Textures = TextureAPI.Textures
+
+
 local sprouts = dofile("sprouts/init.lua")
+TextureAPI:add("icon", ObjectAPI.texture.new("icon.png", 512, 512, {sx=0.3, sy=0.3}))
+TextureAPI:add("title", ObjectAPI.text.new({0,0,0}, "Minecraft"))
+TextureAPI:add("button_sprite", ObjectAPI.sprite.new(Textures.icon, 70, 100))
+TextureAPI:add("simple_button", ObjectAPI.button.new(Textures.icon, 512, 512, 200, 500))
 
 
-local icon = ObjectAPI.texture.new("icon.png", 512, 512, {sx=0.3, sy=0.3})
-local title = ObjectAPI.text.new({0,0,0}, "Minecraft")
-local button_sprite = ObjectAPI.sprite.new(icon, 70, 100)
-local simple_button = ObjectAPI.button.new(icon, 512, 512, 200, 500)
 
-print(icon.w)
-print(icon.h)
-print(icon.image)
-print(icon.scale.sx)
-print(icon.scale.sy)
+print(Textures.icon.w)
+print(Textures.icon.h)
+print(Textures.icon.image)
+print(Textures.icon.scale.sx)
+print(Textures.icon.scale.sy)
 
-print(title.color.r)
-print(title.text)
+print(Textures.title.color.r)
+print(Textures.title.text)
 
-print(button_sprite.texture.image)
-print(button_sprite.x)
-print(button_sprite.y)
+print(Textures.button_sprite.texture.image)
+print(Textures.button_sprite.x)
+print(Textures.button_sprite.y)
 
-print(simple_button.texture.image)
-print(simple_button.w)
-print(simple_button.x)
+print(Textures.simple_button.texture.image)
+print(Textures.simple_button.w)
+print(Textures.simple_button.x)
