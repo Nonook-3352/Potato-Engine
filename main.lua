@@ -1,5 +1,6 @@
 local ObjectAPI = require("API.ObjectAPI")
 local TextureAPI = require("API.TextureAPI")
+local sprouts = dofile("sprouts/init.lua")
 
 
 local icon = ObjectAPI.texture.new("icon.png", 512, 512, {sx=0.3, sy=0.3})
