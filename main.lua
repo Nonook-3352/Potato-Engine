@@ -1,12 +1,11 @@
-local ObjectAPI = require("API.ObjectAPI")
-local TextureAPI = require("API.TextureAPI")
-local Textures = TextureAPI.Textures
-local SproutAPI = require("API.SproutAPI")
-local MouseAPI = require("API.MouseAPI")
-local SaveAPI = require("API.SaveAPI")
-local LoadTexure = dofile("scripts/LoadTexture.lua")
+local potato = require("API.init")
+local Textures = potato.texture.Textures
+local LoadTexture = dofile("scripts/LoadTexture.lua")
 
-SproutAPI.functions.load(SproutAPI.functions.Functions)
+
+
+
+
 
 local sprouts = require("sprouts.init")
 
@@ -18,7 +17,7 @@ end
 
 testing()
 
-MouseAPI.mouse:givepos(200, 500)
+potato.mouse.cursor:givepos(200, 500)
 
 print(Textures.icon.w)
 print(Textures.icon.h)
@@ -37,10 +36,12 @@ print(Textures.simple_button.texture.image)
 print(Textures.simple_button.w)
 print(Textures.simple_button.x)
 
-print(MouseAPI.mouse:insideRectangle(Textures.simple_button))
-MouseAPI.mouse:givepos(200, 250)
-print(MouseAPI.mouse:insideCircle(Textures.circle_button))
+print(potato.mouse.cursor:insideRectangle(Textures.simple_button))
+potato.mouse.cursor:givepos(200, 250)
+print(potato.mouse.cursor:insideCircle(Textures.circle_button))
 
-SproutAPI.update(sprouts)
+potato.sprout:beginLoad()
 
-SproutAPI.ending(sprouts)
+potato.sprout:updateLoad()
+
+potato.sprout:endingLoad()

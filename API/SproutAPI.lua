@@ -1,39 +1,41 @@
 local SproutAPI = {
-    
-    ending = function (sprouts)
-        for key, value in pairs(sprouts) do
-            for key2, value2 in pairs(value) do
-                if type(value2.ending) == "function" then
-                    value2.ending()
-                end
-            end
+    Begins = {},
+    Endings = {},
+    Updates = {},
+
+    begin = function (self, func)
+        table.insert(self.Begins, func)
+    end,
+
+    beginLoad = function (self)
+        for index, value in ipairs(self.Begins) do
+            value()
+        end
+    end,
+
+    ending = function (self, func)
+        table.insert(self.Endings, func)
+    end,
+
+    endingLoad = function (self)
+        for index, value in ipairs(self.Endings) do
+            value()
         end
 
     end,
 
-    update = function (sprouts)
-        for key, value in pairs(sprouts) do
-            for key2, value2 in pairs(value) do
-                if type(value2.update) == "function" then
-                    value2.update()
-                end
-            end
-        end
+    update = function (self, func)
+        table.insert(self.Endings, func)
+    end,
 
+    updateLoad = function (self)
+        for index, value in ipairs(self.Updates) do
+            value()
+        end
     end,
     
     functions = {
-        Functions = {},
-
-        add = function (self, name, func)
-            self.Functions[name] = func
-        end,
-
-        load = function (functions)
-            for key, value in pairs(functions) do
-                value()
-            end
-        end
+        
     }
 
 }

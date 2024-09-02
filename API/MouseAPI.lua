@@ -1,5 +1,5 @@
 local MouseAPI = {
-    mouse = {
+    cursor = {
         x = 0,
         y = 0,
 
