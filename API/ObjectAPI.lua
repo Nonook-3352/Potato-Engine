@@ -10,6 +10,8 @@ Objects = {
             self.image = image_path
             self.w = w
             self.h = h
+            self.sw = w / tonumber(scale.sx)
+            self.sh = h / tonumber(scale.sy)
             self.scale = {sx=scale.sx, sy=scale.sy}
             return self
         end,
@@ -51,11 +53,11 @@ Objects = {
         x = 0,
         y = 0,
 
-        new = function (texture, w, h, x, y)
+        new = function (texture, x, y)
             local self = {}
             self.texture = texture
-            self.w = w
-            self.h = h
+            self.w = texture.sw
+            self.h = texture.sh
             self.x = x
             self.y = y
             return self
