@@ -40,7 +40,7 @@ luac.out
 *.hex
 
 #custom stuff
-/main.lua
+/*.lua
 /scripts/*
 /scenes/*
 /objects/*
