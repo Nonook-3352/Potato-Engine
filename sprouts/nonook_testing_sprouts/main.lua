@@ -4,7 +4,7 @@ local SproutAPI = require("API.SproutAPI")
 local potato = require("API.init")
 
 
-local test = 1
+
 
 TextureAPI:override("icon", ObjectAPI.texture.new("custom_icon.png", 512, 512, {sx=0.4, sy=0.4}))
 TextureAPI:add("custom_texture", ObjectAPI.texture.new("custom_texture.png", 128, 128, {sx=1, sy=1}))
