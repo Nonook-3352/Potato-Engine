@@ -3,16 +3,14 @@ local TextureAPI = require("API.TextureAPI")
 local Textures = TextureAPI.Textures
 local SproutAPI = require("API.SproutAPI")
 local MouseAPI = require("API.MouseAPI")
+local SaveAPI = require("API.SaveAPI")
+local LoadTexure = dofile("scripts/LoadTexture.lua")
 
 SproutAPI.functions.load(SproutAPI.functions.Functions)
 
 local sprouts = require("sprouts.init")
 
-TextureAPI:add("icon", ObjectAPI.texture.new("icon.png", 512, 512, {sx=0.3, sy=0.3}))
-TextureAPI:add("title", ObjectAPI.text.new({0,0,0}, "Minecraft"))
-TextureAPI:add("button_sprite", ObjectAPI.sprite.new(Textures.icon, 70, 100))
-TextureAPI:add("simple_button", ObjectAPI.rectbutton.new(Textures.icon, 512, 512, 200, 500))
-TextureAPI:add("circle_button", ObjectAPI.circlebutton.new(Textures.icon, 100, 200, 200))
+
 
 local function testing()
     print("hi")
@@ -42,5 +40,7 @@ print(Textures.simple_button.x)
 print(MouseAPI.mouse:insideRectangle(Textures.simple_button))
 MouseAPI.mouse:givepos(200, 250)
 print(MouseAPI.mouse:insideCircle(Textures.circle_button))
+
+SproutAPI.update(sprouts)
 
 SproutAPI.ending(sprouts)

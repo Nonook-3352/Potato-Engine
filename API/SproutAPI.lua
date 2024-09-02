@@ -10,6 +10,17 @@ local SproutAPI = {
         end
 
     end,
+
+    update = function (sprouts)
+        for key, value in pairs(sprouts) do
+            for key2, value2 in pairs(value) do
+                if type(value2.update) == "function" then
+                    value2.update()
+                end
+            end
+        end
+
+    end,
     
     functions = {
         Functions = {},

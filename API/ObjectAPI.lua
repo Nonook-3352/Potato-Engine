@@ -76,6 +76,17 @@ Objects = {
             self.y = y
             return self
         end
+    },
+
+    save = {
+        id = "",
+        path = "",
+
+        new = function (id, path)
+            local self = {}
+            self.id = id
+            self.path = ""
+        end
     }
 }
 

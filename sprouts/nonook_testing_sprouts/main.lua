@@ -16,6 +16,10 @@ local function testing()
     print("hello from my sprout")
 end
 
+local function update()
+    print("im ran every frame !")
+end
+
 local ending = function ()
     print("goodbye")
 end
@@ -24,5 +28,6 @@ end
 SproutAPI.functions:add("testing", testing)
 
 return {
-    ending = ending
+    ending = ending,
+    update = update
 }

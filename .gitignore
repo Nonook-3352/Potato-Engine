@@ -41,3 +41,7 @@ luac.out
 
 #custom stuff
 /main.lua
+/scripts/*
+/scenes/*
+/objects/*
+/textures/*
