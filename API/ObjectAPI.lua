@@ -3,15 +3,19 @@ Objects = {
         w = 0,
         h = 0,
         image = "",
+        image_path = "",
+        image_data = "",
         scale = {sx=1, sy=1},
 
         new = function (image_path, w, h, scale)
             local self = {}
-            self.image = image_path
+            self.image = love.graphics.newImage(image_path)
+            self.image_data = love.image.newImageData(image_path)
+            self.image_path = image_path
             self.w = w
             self.h = h
-            self.sw = w / tonumber(scale.sx)
-            self.sh = h / tonumber(scale.sy)
+            self.sw = w * scale.sx
+            self.sh = h * scale.sy
             self.scale = {sx=scale.sx, sy=scale.sy}
             return self
         end,
@@ -53,13 +57,13 @@ Objects = {
         x = 0,
         y = 0,
 
-        new = function (texture, x, y)
+        new = function (sprite)
             local self = {}
-            self.texture = texture
-            self.w = texture.sw
-            self.h = texture.sh
-            self.x = x
-            self.y = y
+            self.texture = sprite
+            self.w = sprite.texture.sw
+            self.h = sprite.texture.sh
+            self.x = sprite.x
+            self.y = sprite.y
             return self
         end
     },
@@ -70,12 +74,12 @@ Objects = {
         x = 0,
         y = 0,
 
-        new = function (texture, r, x, y)
+        new = function (sprite)
             local self = {}
-            self.texture = texture
-            self.r = r
-            self.x = x
-            self.y = y
+            self.texture = sprite
+            self.r = sprite.texture.sw / 2
+            self.x = sprite.x + sprite.texture.sw/2
+            self.y = sprite.y + sprite.texture.sh/2
             return self
         end
     },

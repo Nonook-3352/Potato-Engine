@@ -3,7 +3,7 @@ local MouseAPI = {
         x = 0,
         y = 0,
 
-        givepos =function(self, x, y)
+        givepos = function(self, x, y)
             self.x = x
             self.y = y
         end,
@@ -15,9 +15,8 @@ local MouseAPI = {
         end,
 
         insideCircle = function(self, circle)
-            local dx = self.x - circle.x
-            local dy = self.y - circle.y
-            return dx * dx + dy * dy <= circle.r * circle.r
+            local distanceSquared = (self.x - circle.x) * (self.x - circle.y) + (self.y - circle.y) * (self.y - circle.y)
+            return distanceSquared <= circle.r * circle.r
         end
     }
 }
