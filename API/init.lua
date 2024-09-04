@@ -7,7 +7,8 @@ local Potato = {
     save = require("API.SaveAPI"),
     screen = require("API.ScreenAPI"),
     texture = require("API.TextureAPI"),
-    timer = require("libs.hump.timer")
+    timer = require("libs.hump.timer"),
+    
 }
 
 return Potato
