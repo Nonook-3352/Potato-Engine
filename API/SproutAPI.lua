@@ -34,8 +34,8 @@ local SproutAPI = {
     updateLoad = function (self)
         --print(self.Updates[1])
         for key, value in pairs(self.Updates) do
-
-            return {[key]= value()}
+            local data = value()
+            return {[key]= data}
 
         end
     end,
