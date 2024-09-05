@@ -12,7 +12,11 @@
 
 ## Current wiki : coming soon
 
-## The rewrite is not finished yet
+## Planned rewrite :
+- Objects (doing it)
+- Texture api and loading (doing it)
+- Sprout and script system
+- and more
 
 
 ## Thank to :
