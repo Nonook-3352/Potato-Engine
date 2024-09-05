@@ -26,6 +26,13 @@ Objects = {
             self.x = x
             self.y = y
         end
+    },
+
+    save = Class{
+        init = function (self, path, id)
+            self.path= path
+            self.id = id
+        end
     }
 
 }
