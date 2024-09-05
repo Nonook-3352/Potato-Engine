@@ -17,6 +17,15 @@ Objects = {
             self.y = y
             self.scale = scale
         end
+    },
+
+    text = Class{
+        init = function (self, text, color, x, y)
+            self.text= text
+            self.color = color
+            self.x = x
+            self.y = y
+        end
     }
 
 }

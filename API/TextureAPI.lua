@@ -17,6 +17,7 @@ local textureAPI ={
         end
     end,
 
+    -- Depredcated DO NOT USE
     add = function(self, name, texture)
         if self.Textures[name] == nil then
             self.Textures[name] = texture
@@ -25,6 +26,7 @@ local textureAPI ={
         end
     end,
 
+    --Need a refactor
     override = function (self, name, texture)
         self.Textures[name] = texture
     end
