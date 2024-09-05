@@ -10,7 +10,7 @@
 - I mostly add features for my use, but feel free to ask for some
 - Expect weird lua code spagetti
 
-## Current wiki : coming soon
+## Current wiki (wip): (here)[https://github.com/Nonook-3352/Potato-Engine/wiki]
 
 ## Planned rewrite :
 - Objects (doing it)
