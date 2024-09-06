@@ -45,3 +45,4 @@ luac.out
 /scenes/*
 /objects/*
 /textures/*
+/data/*

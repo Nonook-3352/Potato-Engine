@@ -15,6 +15,7 @@
 ## Planned rewrite :
 - Objects (doing it)
 - Texture api and loading (doing it)
+- Draw api (doing it)
 - Sprout and script system
 - and more
 
