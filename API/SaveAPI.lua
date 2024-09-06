@@ -7,13 +7,6 @@ local SaveAPI = {
     SaveSystem = {
         GameData = {},
 
-        new = function (id, path)
-            local self = {}
-            self.id = id
-            self.path = path
-            return self
-        end,
-
         load = function (self, save)
             local data = FileAPI.readjson(save.path)
 

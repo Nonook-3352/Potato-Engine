@@ -1,6 +1,6 @@
 local DrawAPI = {
-    sprite = function (sprite)
-        love.graphics.draw(sprite.texture.image, sprite.x, sprite.y, 0, sprite.texture.scale.sx, sprite.texture.scale.sy)
+    drawSprite = function (sprite)
+        love.graphics.draw(sprite.texture.image, sprite.x, sprite.y, sprite.r, sprite.texture.scale[0], sprite.texture.scale[1])
     end
 
 }
