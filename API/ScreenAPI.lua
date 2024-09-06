@@ -1,34 +1,34 @@
 local screenapi = {
     centerx = function (objwidth, globalwidth)
-        local width
+        local glowidth
         if globalwidth == nil then
-            width = love.graphics.getWidth()
+            glowidth = love.graphics.getWidth()
         else
-            width = globalwidth
+            glowidth = globalwidth
         end
 
         if type(objwidth) == "number" then
             
-            return (width - objwidth) / 2
+            return (glowidth - objwidth) / 2
         elseif objwidth == nil then
-            return width / 2
+            return glowidth / 2
         end
         
     end,
 
     centery = function (objheight, globalheight)
-        local height
+        local gloheight
         if globalheight == nil then
-            height = love.graphics.getHeight()
+            gloheight = love.graphics.getHeight()
         else
-            height = globalheight
+            gloheight = globalheight
         end
 
         if type(objheight) == "number" then
             
-            return (height - objheight) / 2
+            return (gloheight - objheight) / 2
         elseif objheight == nil then
-            return height / 2
+            return gloheight / 2
         end
         
     end
