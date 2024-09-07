@@ -8,12 +8,12 @@ local ScriptAPI = {
 
     passLoad = function (self, id,  func)
         self.funcs.loads[id] = func
-        log.info("Loaded "..id.." load func")
+        log.script("Loaded "..id.." load func")
     end,
 
     passQuit = function (self, id, func)
         self.funcs.quits[id] = func
-        log.info("Loaded"..id.."quit func")
+        log.script("Loaded"..id.."quit func")
     end
 }
 
