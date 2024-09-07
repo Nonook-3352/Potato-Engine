@@ -1,4 +1,5 @@
 local Class = require "libs.hump.class"
+local potato = {texture=require("API.TextureAPI")}
 
 Objects = {
     
@@ -13,7 +14,11 @@ Objects = {
 
     sprite = Class{
         init = function (self, texture, x, y, scale, r)
-            self.texture = texture
+            if type(texture) == "string" then
+                self.texture = potato.texture:get(texture)
+            else
+                self.texture = texture
+            end
             self.x = x
             self.y = y
             self.scale = scale
@@ -60,7 +65,11 @@ Objects = {
 
     icon = Class{
         init = function (self, texture)
-            self.icon = love.image.newImageData(texture.path)
+            if type(texture) == "string" then 
+                self.icon = love.image.newImageData(potato.texture:get(texture).path)
+            else
+                self.icon = love.image.newImageData(texture.path)
+            end
         end
     }
 

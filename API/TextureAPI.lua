@@ -1,4 +1,4 @@
-local potato = {object=require("API.ObjectAPI")}
+
 local Class = require "libs.hump.class"
 
 local textureAPI ={
@@ -13,8 +13,13 @@ local textureAPI ={
             --print(k .. ". " .. file) --outputs something like "1. main.lua"
             local image = love.graphics.newImage(path.."/"..file)
             local file_name = file:gsub(".png", "")
+            local potato = {object=require("API.ObjectAPI")}
             self.Textures[file_name] = potato.object.texture(path.."/"..file, image:getWidth(), image:getHeight())
         end
+    end,
+
+    get = function (self, id)
+        return self.Textures[id]
     end,
 
     -- Depredcated DO NOT USE
