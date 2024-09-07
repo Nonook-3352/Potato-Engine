@@ -56,6 +56,12 @@ Objects = {
             self.y = y
             self.r = r
         end
+    },
+
+    icon = Class{
+        init = function (self, texture)
+            self.icon = love.image.newImageData(texture.path)
+        end
     }
 
 }
