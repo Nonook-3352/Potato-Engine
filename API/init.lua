@@ -8,6 +8,8 @@ local Potato = {
     screen = require("API.ScreenAPI"),
     texture = require("API.TextureAPI"),
     timer = require("libs.hump.timer"),
+    log = require("libs.ent"),
+    script = require("API.ScriptAPI")
     
 }
 

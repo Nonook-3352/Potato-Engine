@@ -19,8 +19,16 @@ Objects = {
             else
                 self.texture = texture
             end
+            if type(x) == "function" then
+                self.x = x(texture.w)
+            else
             self.x = x
-            self.y = y
+            end
+            if type(y) == "function" then
+                self.y = y(texture.h)
+            else
+                self.y = y
+            end
             self.scale = scale
             if r == nil then
                 self.r = 0
