@@ -10,7 +10,8 @@ local Potato = {
     timer = require("libs.hump.timer"),
     log = require("libs.ent"),
     script = require("API.ScriptAPI"),
-    logLevels = require("API.LogLevels")
+    logLevels = require("API.LogLevels"),
+    test = require("API.TestAPI")
     
 }
 
